@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <div>
-      <div className="navbar container mx-auto bg-amber-100">
+      <div className="navbar container mx-auto shadow-xl rounded-xl border border-black">
         <div className="flex-1">
           <a href="/" className="btn btn-ghost normal-case text-xl">
             Pasha Commerce
