@@ -1,3 +1,4 @@
+
 const ShowProduct = (props) => {
   const { title, price, image } = props.product;
   return (
@@ -11,7 +12,7 @@ const ShowProduct = (props) => {
           <p>Price: ${price}</p>
           <div className="card-actions justify-between">
             <button className="btn btn-primary btn-outline">Detail</button>
-            <button className="btn btn-secondary btn-outline">Buy Now</button>
+            <button onClick={()=>{props.buyNow(price)}} className="btn btn-secondary btn-outline">Buy Now</button>
           </div>
         </div>
       </div>

@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import ShowProduct from '../ShowProduct/ShowProduct';
 
-const FetchProducts = () => {
+const FetchProducts = (props) => {
     const [items, setItems] = useState([]);
-
 
 
     useEffect(() => {
@@ -14,7 +13,7 @@ const FetchProducts = () => {
         }
         fetchProducts();
     },[])
-    const allItems =items.map(item => <ShowProduct product={item} key={item.id}></ShowProduct>)
+    const allItems =items.map(item => <ShowProduct product={item} key={item.id} buyNow = {props.buyNow}></ShowProduct>)
 
     return (
         <div className="container mx-auto ">
