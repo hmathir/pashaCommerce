@@ -12,12 +12,13 @@ const FetchProducts = (props) => {
             setItems(data);
         }
         fetchProducts();
-    },[])
+    },[]);
+    
     const allItems =items.map(item => <ShowProduct product={item} key={item.id} buyNow = {props.buyNow}></ShowProduct>)
 
     return (
         <div className="container mx-auto ">
-            <div className="grid grid-cols-3 gap-8 ">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mx-4 md:mx-0">
             {allItems}
             </div>
 

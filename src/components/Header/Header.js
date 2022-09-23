@@ -3,11 +3,19 @@ const Header = ({count,price}) => {
     <div>
       <div className="navbar container mx-auto shadow-xl rounded-xl border border-black">
         <div className="flex-1">
-          <a href="/" className="btn btn-ghost normal-case text-xl">
+          <a href="/" className="btn btn-ghost normal-case text-xl border border-black shadow-xl">
             Pasha Commerce
           </a>
         </div>
-        <div className="flex-none">
+        <div className="flex-none ">
+          <div className="hidden md:block">
+          <ul className="flex gap-8">
+            <li> <a href="/">Home</a></li>
+            <li> <a href="/">About</a></li>
+            <li> <a href="/">Contact</a></li>
+        </ul>
+          </div>
+
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <div className="indicator">
@@ -43,10 +51,10 @@ const Header = ({count,price}) => {
               </div>
             </div>
           </div>
-          <div className="dropdown dropdown-end">
+          <div className="dropdown dropdown-end md:hidden">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img src="https://placeimg.com/80/80/people" alt="" />
+              <div className="rounded-full">
+              <i className="fa-solid fa-bars"></i>
               </div>
             </label>
             <ul
@@ -55,15 +63,14 @@ const Header = ({count,price}) => {
             >
               <li>
                 <a href="/" className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
+                  Home
                 </a>
               </li>
               <li>
-                <a href="/">Settings</a>
+                <a href="/">About</a>
               </li>
               <li>
-                <a href="/">Logout</a>
+                <a href="/">Contact</a>
               </li>
             </ul>
           </div>

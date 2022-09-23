@@ -6,8 +6,9 @@ import Header from './components/Header/Header';
 function App() {
   const [count, setCount] = useState(0);
   const [price, setPrice] = useState(0);
+  
 
-  const buyNow = (newPrice) => {
+  const buyNow = (newPrice, title) => {
     setCount(count => count + 1);
     setPrice(newPrice + price)
   }
